@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Frames Example</title>
+    <style>
+        /* Layout for navigation and content sections */
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation frame styling */
+        nav {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        nav a {
+            display: block;
+            margin: 10px 0;
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Main content section */
+        main {
+            width: 80%;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Floating iframe styling */
+        .floating-frame {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 200px;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation frame -->
+    <nav>
+        <h2>Navigation</h2>
+        <a href="https://www.example.com" target="content-frame">Example Link 1</a>
+        <a href="https://www.example.com" target="content-frame">Example Link 2</a>
+        <a href="https://www.example.com" target="content-frame">Example Link 3</a>
+    </nav>
+
+    <!-- Main content frame with mixed floating frame -->
+    <main>
+        <h1>Main Content Area</h1>
+        <p>This is the main content area. You can use the navigation links on the left to load different content into the frame below.</p>
+        
+        <!-- Mixed frame -->
+        <iframe name="content-frame" src="https://www.example.com" width="100%" height="400" style="border: 2px solid #333;"></iframe>
+        
+        <!-- Floating frame -->
+        <iframe class="floating-frame" src="https://www.example.com"></iframe>
+    </main>
+
+</body>
+</html>
